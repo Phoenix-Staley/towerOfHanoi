@@ -6,10 +6,15 @@
                 color: white;
                 display: flex;
                 flex-direction: column;
+                width: 95%;
+                height: 65%;
                 align-content: center;
+                justify-content: space-around;
+                padding-top: 150px;
+                padding-bottom: 150px;
             }
             button {
-                width: 100px;
+                width: 200px;
                 height: 35px;
                 background-color: darkcyan;
                 color: white;
@@ -19,18 +24,33 @@
             button:disabled {
                 background-color: darkgray;
             }
+            h1 {
+                font-size: 350%;
+            }
+            h2 {
+                position: absolute;
+                left: 40%;
+                font-size: 500%;
+                background-color: darkcyan;
+            }
+            p {
+                margin: auto;
+                margin-top: 5px;
+                margin-bottom: 25px;
+            }
             .towers {
                 display: flex;
                 justify-content: space-around;
                 min-height: 117px;
-                max-width: 500px;
+                max-width: 800px;
                 padding-bottom: 10px;
+                margin: auto;
             }
             .towers div {
                 display: flex;
                 flex-direction: column-reverse;
                 align-items: center;
-                min-width: 85px;
+                min-width: 200px;
             }
             .towers div p {
                 min-width: 5px;
@@ -38,12 +58,17 @@
                 text-align: center;
                 margin: 5px;
                 margin-bottom: 0;
+                border-radius: 5px;
+                padding: 10px;
+                color: black;
             }
             .buttonHolder {
-                width: 500px;
+                width: 800px;
                 height: 25px;
                 display: flex;
                 justify-content: space-around;
+                margin-left: auto;
+                margin-right: auto;
             }
         </style>
         <title>Tower of Hanoi</title>
@@ -52,20 +77,20 @@
     </head>
 
     <h1 style="text-align: center;">Tower of Hanoi</h1>
+    <h2 style="display: none;" id="winAlert">You won!!!</h2>
+    <p>Get all the disks to the right-most tower.</p>
     <br>
     <body>
         <div>
             <div class="towers">
                 <div id="tower1">
-                    <p style="width: 75px; background-color: blue;">5</p>
-                    <p style="width: 65px; background-color: green;">4</p>
-                    <p style="width: 55px; background-color: yellow;">3</p>
-                    <p style="width: 45px; background-color: orange;">2</p>
-                    <p style="width: 35px; background-color: red;">1</p>
+                    <p style="width: 130px; background-color: aqua;">5</p>
+                    <p style="width: 110px; background-color: chartreuse;">4</p>
+                    <p style="width: 90px; background-color: yellow;">3</p>
+                    <p style="width: 70px; background-color: tomato;">2</p>
+                    <p style="width: 50px; background-color: red;">1</p>
                 </div>
-                <div id="tower2">
-                    <p></p>
-                </div>
+                <div id="tower2"></div>
                 <div id="tower3">
                     <p></p>
                 </div>

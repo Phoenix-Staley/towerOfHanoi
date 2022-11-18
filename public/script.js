@@ -9,8 +9,8 @@ let towerValues = [
     [],
     []
 ]
-let colors = ["red", "orange", "yellow", "green", "blue"];
-let widths = [35, 45, 55, 65, 75];
+let colors = ["red", "tomato", "yellow", "chartreuse", "aqua"];
+let widths = [50, 70, 90, 110, 130];
 
 testFunc = (event) => {
     if (!isSourceSelected) {
@@ -37,7 +37,7 @@ testFunc = (event) => {
             for (let i = 0; i < sourceVal.length; i++) {
                 let p = document.createElement("p");
                 p.innerText = sourceVal[i];
-                p.style.width = `${widths[numOfTiles - i - 1]}px`;
+                p.style.width = `${widths[sourceVal[i] - 1]}px`;
                 p.style.backgroundColor = colors[sourceVal[i] - 1];
                 sourceTowerEl.appendChild(p);
             }
@@ -47,6 +47,11 @@ testFunc = (event) => {
                 p.style.width = `${widths[destVal[i] - 1]}px`;
                 p.style.backgroundColor = colors[destVal[i] - 1];
                 destinationTowerEl.appendChild(p);
+            }
+
+            if (destVal.length === 5 && destNum === 3) {
+                let winHeaderEl = document.getElementById("winAlert");
+                winHeaderEl.style.display = "inline";
             }
         }
 
