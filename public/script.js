@@ -55,7 +55,7 @@ testFunc = (event) => {
             if (destVal.length === 5 && destNum === "3") {
                 let winHeaderEl = document.getElementById("winAlert");
                 winHeaderEl.style.display = "inline";
-                finalNumOfMovesEl.innerText = numOfMoves;
+                finalNumOfMovesEl.innerText = numOfMoves + 1;
             }
 
             numOfMoves++;
