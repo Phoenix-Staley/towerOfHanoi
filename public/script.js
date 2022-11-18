@@ -68,3 +68,7 @@ testFunc = (event) => {
         }
     }
 }
+
+let reset = () => {
+    this.location.reload();
+}
