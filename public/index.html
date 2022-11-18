@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color: black;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+            }
+            button {
+                width: 100px;
+                height: 35px;
+                background-color: darkcyan;
+                color: white;
+                border-radius: 2px;
+                border-color: azure;
+            }
+            button:disabled {
+                background-color: darkgray;
+            }
+            .towers {
+                display: flex;
+                justify-content: space-around;
+                min-height: 117px;
+                max-width: 500px;
+                padding-bottom: 10px;
+            }
+            .towers div {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                min-width: 85px;
+            }
+            .towers div p {
+                min-width: 5px;
+                word-wrap: break-word;
+                text-align: center;
+                margin: 5px;
+                margin-bottom: 0;
+            }
+            .buttonHolder {
+                width: 500px;
+                height: 25px;
+                display: flex;
+                justify-content: space-around;
+            }
+        </style>
+        <title>Tower of Hanoi</title>
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <meta charset="utf-8">
+    </head>
+
+    <h1 style="text-align: center;">Tower of Hanoi</h1>
+    <br>
+    <body>
+        <div>
+            <div class="towers">
+                <div id="tower1">
+                    <p style="width: 75px; background-color: blue;">5</p>
+                    <p style="width: 65px; background-color: green;">4</p>
+                    <p style="width: 55px; background-color: yellow;">3</p>
+                    <p style="width: 45px; background-color: orange;">2</p>
+                    <p style="width: 35px; background-color: red;">1</p>
+                </div>
+                <div id="tower2">
+                    <p></p>
+                </div>
+                <div id="tower3">
+                    <p></p>
+                </div>
+            </div>
+            <div class="buttonHolder">
+                <button onclick="testFunc(event)" data-tNum="1" class="tButtons">Tower 1</button>
+                <button onclick="testFunc(event)" data-tNum="2" class="tButtons">Tower 2</button>
+                <button onclick="testFunc(event)" data-tNum="3" class="tButtons">Tower 3</button>
+            </div>
+        </div>
+    </body>
+    <script src="./script.js"></script>
+</html>
