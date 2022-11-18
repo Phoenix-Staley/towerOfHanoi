@@ -1,7 +1,10 @@
 let sourceTowerEl = document.getElementById("tower1");
 let destinationTowerEl = document.getElementById("tower1");
-let sourceNum = 0;
-let destNum = 0;
+let numOfMovesEl = document.getElementById("numOfMoves");
+let finalNumOfMovesEl = document.getElementById("finalNumOfMoves");
+let numOfMoves = 0;
+let sourceNum = "0";
+let destNum = "0";
 let isSourceSelected = false;
 let numOfTiles = 5;
 let towerValues = [
@@ -49,10 +52,14 @@ testFunc = (event) => {
                 destinationTowerEl.appendChild(p);
             }
 
-            if (destVal.length === 5 && destNum === 3) {
+            if (destVal.length === 5 && destNum === "3") {
                 let winHeaderEl = document.getElementById("winAlert");
                 winHeaderEl.style.display = "inline";
+                finalNumOfMovesEl.innerText = numOfMoves;
             }
+
+            numOfMoves++;
+            numOfMovesEl.innerText = numOfMoves;
         }
 
         let tButtons = document.getElementsByClassName("tButtons");
