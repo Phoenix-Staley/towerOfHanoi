@@ -6,14 +6,14 @@ let numOfMoves = 0;
 let sourceNum = "0";
 let destNum = "0";
 let isSourceSelected = false;
-let numOfTiles = 5;
-let towerValues = [
+const numOfTiles = 5;
+const towerValues = [
     [5,4,3,2,1],
     [],
     []
 ]
-let colors = ["red", "tomato", "yellow", "chartreuse", "aqua"];
-let widths = [50, 70, 90, 110, 130];
+const colors = ["red", "tomato", "yellow", "chartreuse", "aqua"];
+const widths = [50, 70, 90, 110, 130];
 
 testFunc = (event) => {
     if (!isSourceSelected) {
@@ -67,4 +67,8 @@ testFunc = (event) => {
             tButtons[i].disabled = false;
         }
     }
+}
+
+let reset = () => {
+    this.location.reload();
 }
